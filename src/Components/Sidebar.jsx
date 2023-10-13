@@ -21,7 +21,7 @@ const Sidebar = () => {
     return (
         <div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
             {activeMenu && (
-                <div className="flex justify-between flex-col flex-1">
+                <div className="flex justify-between h-full flex-col">
                     <div className="flex flex-col">
                         <div className="flex mb-4 justify-between items-center">
                             <Link
@@ -51,8 +51,8 @@ const Sidebar = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="relative flex  align-bottom ">
-                        <div className="fixed bottom-7 flex justify-between flex-row w-64 bg-[#1450A3] z-50 text-xl h-fit text-white rounded-xl ">
+                    <div className="flex justify-items-end">
+                        <div className="bottom-7 flex justify-between flex-row w-64 bg-[#1450A3] z-50 text-xl h-fit text-white rounded-xl ">
                             <div className="flex flex-row items-center">
                                 <img src={img} alt="profile" className="w-[40px] ml-3 h-[40px] text-center rounded-full" />
                                 <div className="flex flex-col ml-4 py-2">
