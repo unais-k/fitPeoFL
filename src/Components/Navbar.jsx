@@ -1,11 +1,15 @@
 import React from "react";
 import { BiSearch } from "react-icons/bi";
+import { ImMenu } from "react-icons/im";
 
 const Navbar = () => {
     return (
         <div className="flex justify-center items-center sm:px-16 px-6">
             <div className="xl:max-w-[1380px] w-full">
                 <div className="flex justify-between flex-row">
+                    <div>
+                        <ImMenu size={25} />
+                    </div>
                     <div className="text-black text-[20px] font-poppins font-normal">Hello Shahrukh 👋🏻,</div>
                     <div className="px-3 py-3 flex justify-center gap-2 flex-row items-center bg-white">
                         <BiSearch color="gray" size={25} />

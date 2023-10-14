@@ -4,7 +4,7 @@ import { cardData } from "./../assets/index";
 const AnalysisCard = () => {
     return (
         <div className="xl:max-w-[1380px] w-full">
-            <div className="flex justify-between gap-3 p-3 ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 p-3  ">
                 {cardData.map((data) => {
                     return (
                         <div key={data.id} className="bg-white px-4 py-6 rounded-xl">
@@ -19,13 +19,13 @@ const AnalysisCard = () => {
                                     <div className="text-2xl font-poppins font-bold text-black">{data.price}</div>
                                     {data.color === "green" ? (
                                         <div className="flex flex-row justify-start gap-0.5">
-                                            <p className="text-green-500">{data.arrow}</p>
+                                            <p className="text-green-500 pt-0.5">{data.arrow}</p>
                                             <p className="text-green-500 font-bold me-0.5">{data.percentage}</p>
                                             <p className="text-black font-normal">{data.time}</p>
                                         </div>
                                     ) : (
                                         <div className="flex flex-row justify-start gap-0.5">
-                                            <p className="text-red-500">{data.arrow}</p>
+                                            <p className="text-red-500 pt-0.5">{data.arrow}</p>
                                             <p className="text-red-500 font-bold me-0.5">{data.percentage}</p>
                                             <p className="text-black font-normal">{data.time}</p>
                                         </div>

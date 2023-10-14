@@ -3,6 +3,7 @@ import bag from "./bag-2.svg";
 import wallet from "./wallet-money.svg";
 import money from "./money-recive.svg";
 import order from "./order-line.svg";
+
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 
 export const cardData = [

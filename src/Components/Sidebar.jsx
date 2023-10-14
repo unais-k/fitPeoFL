@@ -51,7 +51,7 @@ const Sidebar = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="flex justify-items-end">
+                    <div className="flex justify-items-end me-3">
                         <div className="bottom-7 flex justify-between flex-row w-64 bg-[#1450A3] z-50 text-xl h-fit text-white rounded-xl ">
                             <div className="flex flex-row items-center">
                                 <img src={img} alt="profile" className="w-[40px] ml-3 h-[40px] text-center rounded-full" />
