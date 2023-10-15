@@ -16,7 +16,7 @@ const Dropdown = () => {
             </div>
             <ul
                 className={`bg-slate-100 absolute w-full mt-2 overflow-y-auto
-                                     ${open1 ? "max-h-20 rounded-sm" : "max-h-0"}`}
+                                     ${open1 ? "max-h-60 rounded-sm" : "max-h-0"}`}
             >
                 {filterData.map((item) => {
                     return (

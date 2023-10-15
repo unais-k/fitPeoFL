@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./Components/Sidebar.jsx";
 import Navbar from "./Components/Navbar.jsx";
@@ -8,27 +8,28 @@ import DonutChart from "./Components/DonutChart";
 import { BiSearch } from "react-icons/bi";
 import Dropdown from "./Components/Dropdown.jsx";
 import Table from "./Components/Table.jsx";
+import { useStateContext } from "./constants/contexts.jsx";
 
 const App = () => {
-    const activeMenu = true;
+    const { activeMenu } = useStateContext();
     return (
         <div>
             <BrowserRouter>
-                <div className="flex">
+                <div className="flex relative">
                     {activeMenu ? (
-                        <div className="w-72 bg-[#191D88] sidebar">
+                        <div className="max-w-80 md:w-80 overflow-hidden fixed bg-[#191D88] sidebar">
                             <Sidebar />
                         </div>
                     ) : (
-                        <div className="w-0 bg-[#191D88]">
+                        <div className="w-0 overflow-hidden bg-[#191D88]">
                             <Sidebar />
                         </div>
                     )}
-                    <div className="w-full bg-gray-100">
-                        <div className="my-5">
+                    <div className="w-full md:ml-80 pb-20 bg-gray-100">
+                        <div className="mt-8 mb-10">
                             <Navbar />
                         </div>
-                        <div className="flex justify-center items-center sm:px-16 px-6">
+                        <div className="flex justify-center items-center sm:px-16 px-3">
                             <AnalysisCard />
                         </div>
                         <div className="flex justify-center items-center sm:px-16 px-6">
