@@ -56,9 +56,13 @@ const Sidebar = () => {
                         </div>
                     </div>
                     <div className="flex justify-items-end">
-                        <div className="bottom-7 flex justify-between flex-row md:w-72 w-60 me-3 bg-[#1450A3] z-50 text-xl h-fit text-white rounded-xl ">
+                        <div className="bottom-7 flex justify-between flex-row md:w-68 w-60 me-3 bg-[#1450A3] z-50 text-xl h-fit text-white rounded-xl ">
                             <div className="flex flex-row items-center w-fit">
-                                <img src={img} alt="profile" className="w-[40px] ml-3 h-[40px] text-center rounded-full" />
+                                <img
+                                    src={img}
+                                    alt="profile"
+                                    className="w-[40px] ml-3 h-[40px] text-center object-contain rounded-full"
+                                />
                                 <div className="flex flex-col ml-4 py-2">
                                     <h4 className="font-poppins font-normal text-[16px] leading-[24px] text-dimWhite">
                                         Evano

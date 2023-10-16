@@ -18,13 +18,13 @@ const AnalysisCard = () => {
                                     <h2 className="text-gray-400 font-poppins font-medium text-[12px]">{data.title}</h2>
                                     <div className="text-2xl font-poppins font-bold text-black">{data.price}</div>
                                     {data.color === "green" ? (
-                                        <div className="flex flex-row justify-start gap-0.5">
+                                        <div className="flex flex-row justify-start gap-0.5 text-sm">
                                             <p className="text-green-500 pt-0.5">{data.arrow}</p>
                                             <p className="text-green-500 font-bold me-0.5">{data.percentage}</p>
                                             <p className="text-black font-normal">{data.time}</p>
                                         </div>
                                     ) : (
-                                        <div className="flex flex-row justify-start gap-0.5">
+                                        <div className="flex flex-row justify-start gap-0.5 text-sm">
                                             <p className="text-red-500 pt-0.5">{data.arrow}</p>
                                             <p className="text-red-500 font-bold me-0.5">{data.percentage}</p>
                                             <p className="text-black font-normal">{data.time}</p>

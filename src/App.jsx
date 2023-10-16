@@ -3,12 +3,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./Components/Sidebar.jsx";
 import Navbar from "./Components/Navbar.jsx";
 import AnalysisCard from "./Components/AnalysisCard.jsx";
-import BarChart from "./Components/BarChart";
-import DonutChart from "./Components/DonutChart";
+import { DonutChart } from "./Components/DonutChart";
 import { BiSearch } from "react-icons/bi";
-import Dropdown from "./Components/Dropdown.jsx";
+import { Dropdown } from "./Components/Dropdown.jsx";
 import Table from "./Components/Table.jsx";
 import { useStateContext } from "./constants/contexts.jsx";
+import BarGraph from "./Components/BarGraph.jsx";
+import { DonutChartData } from "./constants/data";
 
 const App = () => {
     const { activeMenu } = useStateContext();
@@ -17,7 +18,7 @@ const App = () => {
             <BrowserRouter>
                 <div className="flex relative">
                     {activeMenu ? (
-                        <div className="max-w-80 md:w-80 overflow-hidden fixed bg-[#191D88] sidebar">
+                        <div className="max-w-72 md:w-72 overflow-hidden fixed bg-[#191D88] sidebar">
                             <Sidebar />
                         </div>
                     ) : (
@@ -25,7 +26,7 @@ const App = () => {
                             <Sidebar />
                         </div>
                     )}
-                    <div className="w-full md:ml-80 pb-20 bg-gray-100">
+                    <div className="w-full md:ml-72 pb-20 bg-gray-100">
                         <div className="mt-8 mb-10">
                             <Navbar />
                         </div>
@@ -34,9 +35,13 @@ const App = () => {
                         </div>
                         <div className="flex justify-center items-center sm:px-16 px-6">
                             <div className="xl:max-w-[1380px] w-full">
-                                <div className="flex flex-1 flex-row">
-                                    <BarChart />
-                                    <DonutChart />
+                                <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
+                                    <div className="col-span-2 my-10 py-4 px-5 bg-white rounded-md">
+                                        <BarGraph />
+                                    </div>
+                                    <div className="my-10 py-4 px-5 bg-white rounded-md">
+                                        <DonutChart data={DonutChartData} />
+                                    </div>
                                 </div>
                             </div>
                         </div>

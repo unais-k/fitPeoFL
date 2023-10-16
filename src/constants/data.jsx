@@ -124,3 +124,94 @@ export const links = [
         ),
     },
 ];
+
+export const BarGraphData = [
+    {
+        month: "Jan",
+        h: "190",
+        id: 1,
+    },
+    {
+        month: "Feb",
+        h: "140",
+        id: 2,
+    },
+    {
+        month: "Mar",
+        h: "260",
+        id: 3,
+    },
+    {
+        month: "Apr",
+        h: "200",
+        id: 4,
+    },
+    {
+        month: "May",
+        h: "230",
+        id: 5,
+    },
+    {
+        month: "Jun",
+        h: "100",
+        id: 6,
+    },
+    {
+        month: "Jul",
+        h: "220",
+        id: 7,
+    },
+    {
+        month: "Aug",
+        h: "260",
+        id: 8,
+    },
+    {
+        month: "Sep",
+        h: "240",
+        id: 9,
+    },
+    {
+        month: "Oct",
+        h: "190",
+        id: 10,
+    },
+    {
+        month: "Nov",
+        h: "160",
+        id: 11,
+    },
+    {
+        month: "Dec",
+        h: "200",
+        id: 12,
+    },
+];
+
+export const DonutChartData = [
+    {
+        name: "Cluster 1",
+        value: 210,
+        color: "var(--color-fuchsia-400)",
+    },
+    {
+        name: "Cluster 2",
+        value: 30,
+        color: "var(--color-fuchsia-100)",
+    },
+    {
+        name: "Cluster 3",
+        value: 180,
+        color: "var(--color-fuchsia-300)",
+    },
+    {
+        name: "Cluster 4",
+        value: 260,
+        color: "var(--color-fuchsia-500)",
+    },
+    {
+        name: "Cluster 5",
+        value: 60,
+        color: "var(--color-fuchsia-200)",
+    },
+].sort((a, b) => a.value - b.value);
