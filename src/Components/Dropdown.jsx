@@ -18,10 +18,10 @@ export const Dropdown = () => {
                 className={`bg-slate-100 absolute w-full mt-2 overflow-y-auto
                                      ${open1 ? "max-h-60 rounded-md" : "max-h-0"}`}
             >
-                {filterData.map((item) => {
+                {filterData.map((item, index) => {
                     return (
                         <li
-                            key={Math.floor(Math.random()) * Math.floor(Math.random()) + (2 * 124) / 3.5}
+                            key={index}
                             className="h-full py-1 ps-2 "
                             onClick={() => {
                                 setSelect(item);
@@ -52,10 +52,10 @@ export const MonthlyDrop = () => {
                 className={`bg-slate-100 absolute w-full mt-2 overflow-y-auto
                                      ${open1 ? "max-h-60 rounded-md" : "max-h-0"}`}
             >
-                {filterData.map((item) => {
+                {filterData.map((item, index) => {
                     return (
                         <li
-                            key={Math.floor(Math.random()) * Math.floor(Math.random()) + (2 * 124) / 3.5}
+                            key={index}
                             className="h-full py-1 ps-2 "
                             onClick={() => {
                                 setSelect(item);

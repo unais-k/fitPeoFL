@@ -24,7 +24,7 @@ const BarGraph = () => {
                             <div key={data.id} className="relative flex flex-col items-center flex-grow pb-5 group">
                                 <div
                                     style={{ height: `${data.h}px` }}
-                                    className={`relative flex justify-center w-full bg-[#ebf2ff] hover:bg-indigo-500 mb-3 rounded-md`}
+                                    className={`relative flex justify-center w-full bg-[#ebf2ff] hover:shadow-lg hover:bg-indigo-500 mb-3 rounded-md`}
                                 ></div>
                                 <span className="font-poppins absolute bottom-0 text-xs text-gray-400 font-semibold md:font-bold">
                                     {data.month}

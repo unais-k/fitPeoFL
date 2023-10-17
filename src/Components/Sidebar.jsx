@@ -64,18 +64,6 @@ const Sidebar = () => {
                                             </div>
                                         </div>
                                     )}
-                                    {/* <div
-                                        onClick={() => setIsActive(item.title)}
-                                        className="flex justify-between hover:bg-[#1450A3] rounded-md mx-3"
-                                    >
-                                        <div onClick={handleCloseSideBar} className="flex justify-start items-center">
-                                            <p className="text-white mx-3 w-8 h-8">{item.icon}</p>
-                                            <p className="text-white m-3 mt-4">{item.title}</p>
-                                        </div>
-                                        <div className="flex justify-between items-center pe-2">
-                                            <BiChevronRight color="white" size={25} />
-                                        </div>
-                                    </div> */}
                                 </div>
                             ))}
                         </div>
