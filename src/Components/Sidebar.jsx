@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiChevronDown, BiChevronRight } from "react-icons/bi";
 import { RiSettingsLine } from "react-icons/ri";
 import { useStateContext } from "../constants/contexts";
@@ -9,9 +9,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Sidebar = () => {
     const { activeMenu, setActiveMenu, screenSize } = useStateContext();
-    const activeLink = "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg  text-white  text-md m-2";
-    const normalLink =
-        "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2";
+    const [isActive, setIsActive] = useState("Dashboard");
 
     const handleCloseSideBar = () => {
         if (activeMenu !== undefined && screenSize <= 1061) {
@@ -41,8 +39,35 @@ const Sidebar = () => {
                         </div>
                         <div className="mt-10">
                             {links.map((item) => (
-                                <div key={item.title}>
-                                    <div className="flex justify-between hover:bg-[#1450A3] rounded-md mx-3">
+                                <div key={item.id}>
+                                    {isActive === item.title ? (
+                                        <div
+                                            onClick={() => setIsActive(item.title)}
+                                            className="flex justify-between bg-[#1450A3] mb-1 rounded-md mx-3"
+                                        >
+                                            <div onClick={handleCloseSideBar} className="flex justify-start items-center">
+                                                <p className="text-white mx-3 w-8 h-8">{item.icon}</p>
+                                                <p className="text-white m-3 mt-4">{item.title}</p>
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <div
+                                            onClick={() => setIsActive(item.title)}
+                                            className="flex justify-between mb-1 hover:bg-[#1450A3] rounded-md mx-3"
+                                        >
+                                            <div onClick={handleCloseSideBar} className="flex justify-start items-center">
+                                                <p className="text-white mx-3 w-8 h-8">{item.icon}</p>
+                                                <p className="text-white m-3 mt-4">{item.title}</p>
+                                            </div>
+                                            <div className="flex justify-between items-center pe-2">
+                                                <BiChevronRight color="white" size={25} />
+                                            </div>
+                                        </div>
+                                    )}
+                                    {/* <div
+                                        onClick={() => setIsActive(item.title)}
+                                        className="flex justify-between hover:bg-[#1450A3] rounded-md mx-3"
+                                    >
                                         <div onClick={handleCloseSideBar} className="flex justify-start items-center">
                                             <p className="text-white mx-3 w-8 h-8">{item.icon}</p>
                                             <p className="text-white m-3 mt-4">{item.title}</p>
@@ -50,13 +75,13 @@ const Sidebar = () => {
                                         <div className="flex justify-between items-center pe-2">
                                             <BiChevronRight color="white" size={25} />
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             ))}
                         </div>
                     </div>
                     <div className="flex justify-items-end">
-                        <div className="bottom-7 flex justify-between flex-row md:w-68 w-60 me-3 bg-[#1450A3] z-50 text-xl h-fit text-white rounded-xl ">
+                        <div className="bottom-7 flex justify-between flex-row md:max-w-72 w-60 me-3 bg-[#1450A3] z-50 text-xl h-fit text-white rounded-xl ">
                             <div className="flex flex-row items-center w-fit">
                                 <img
                                     src={img}
@@ -73,7 +98,7 @@ const Sidebar = () => {
                                 </div>
                             </div>
                             <div className="flex justify-center items-center pe-2">
-                                <BiChevronDown />
+                                <BiChevronDown size={25} />
                             </div>
                         </div>
                     </div>

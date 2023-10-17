@@ -1,10 +1,9 @@
 import React from "react";
-import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineStock } from "react-icons/ai";
-import { FiShoppingBag } from "react-icons/fi";
 
 export const links = [
     {
         title: "Dashboard",
+        id: 1,
         icon: (
             <svg
                 width="32"
@@ -56,6 +55,7 @@ export const links = [
 
     {
         title: "Product",
+        id: 2,
         icon: (
             <svg fill="none" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
                 <g stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
@@ -70,6 +70,7 @@ export const links = [
     },
     {
         title: "Customers",
+        id: 3,
         icon: (
             <svg fill="none" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
                 <g stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
@@ -82,6 +83,7 @@ export const links = [
     },
     {
         title: "Income",
+        id: 4,
         icon: (
             <svg fill="none" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
                 <g fill="#fff">
@@ -96,6 +98,7 @@ export const links = [
     },
     {
         title: "Promote",
+        id: 5,
         icon: (
             <svg fill="none" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -113,6 +116,7 @@ export const links = [
     },
     {
         title: "Help",
+        id: 6,
         icon: (
             <svg fill="none" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
                 <g fill="#fff">
@@ -187,31 +191,3 @@ export const BarGraphData = [
         id: 12,
     },
 ];
-
-export const DonutChartData = [
-    {
-        name: "Cluster 1",
-        value: 210,
-        color: "var(--color-fuchsia-400)",
-    },
-    {
-        name: "Cluster 2",
-        value: 30,
-        color: "var(--color-fuchsia-100)",
-    },
-    {
-        name: "Cluster 3",
-        value: 180,
-        color: "var(--color-fuchsia-300)",
-    },
-    {
-        name: "Cluster 4",
-        value: 260,
-        color: "var(--color-fuchsia-500)",
-    },
-    {
-        name: "Cluster 5",
-        value: 60,
-        color: "var(--color-fuchsia-200)",
-    },
-].sort((a, b) => a.value - b.value);

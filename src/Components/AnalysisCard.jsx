@@ -10,7 +10,7 @@ const AnalysisCard = () => {
                         <div key={data.id} className="bg-white px-4 py-6 rounded-xl">
                             <div className="flex items-center justify-center gap-2 flex-row">
                                 <div
-                                    className={`w-[120px] h-[120px] rounded-full flex justify-center items-center ${data.bg}`}
+                                    className={`w-[100px] h-[100px] rounded-full flex justify-center items-center ${data.bg}`}
                                 >
                                     {data.icon}
                                 </div>

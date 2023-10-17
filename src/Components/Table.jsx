@@ -5,7 +5,7 @@ const Table = () => {
     return (
         <div className="inline-block w-full">
             <div className="overflow-hidden">
-                <table className="w-full">
+                <table className="w-full overflow-auto overflow-x-auto object-contain">
                     <thead className="border-b">
                         <tr>
                             <th
